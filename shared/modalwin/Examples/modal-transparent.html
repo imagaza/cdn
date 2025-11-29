@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<title>Replete Modal - Transparent Modal</title>
+		<link rel="stylesheet" href="css/animate.css">
+		<link rel="stylesheet" href="css/replete-modal.css">
+			
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="js/replete-modal.js"></script>
+		<style>
+			a{cursor: pointer;border: 1px solid black; padding: 7px 14px; text-align: center;}
+		</style>
+	</head>
+	<body style="margin:50 auto; width:200px;">
+		<a class="transparentCandie">Transparent Modal</a>
+		<script>
+			$('.transparentCandie').on('click',function(){
+				rplm({
+					title:"Transparent Modal",
+					text: "Tiramisu croissant I love I love apple pie chocolate. Lemon drops jelly gummies halvah marzipan gummi bears chocolate cake. I love sugar plum bear claw. Sugar plum pudding candy canes gummies I love oat cake croissant muffin.",
+					html: true,
+					animation: "rotateIn",
+					modalNOverlay: 'transparent',
+					showCloseButton: true,
+					closeButtonWithInModal: true,
+					confirmButtonText: 'Done',
+				});
+			});
+		</script>
+	</body>
+</html>

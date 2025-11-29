@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<head>
+    <title>Full Width Slider 2.0 - Responsive Design</title>
+
+    <!-- ****************** STEP 1: INCLUDE FOLLOWING IN YOUR <HEAD> ****************** -->
+    <meta charset="utf-8">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0;">
+
+    <link rel="stylesheet" href="css/fws2.css" media="all">
+    <link href='http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="js/imagesloaded.js"></script>
+    <script src="js/jquery.easing.js"></script>
+    <script src="js/fws2.js"></script>
+    
+    <script type="text/javascript">
+        jQuery(document).ready(function(){
+            new fws2().init({
+                unique     : "fws2-instance1", // ID of the slider instance 
+                
+                duration   : "1000",  /* Slides Fade Speed (miliseconds) */
+                hoverpause : "1",     /* Pause autoslide on mousehover, 0 - OFF, 1 - ON */
+                pause      : "6000",  /* Autoslide pause between slides (miliseconds), 0 - OFF */
+                arrows     : "1",     /* Show navigation Arrows, 0 - OFF, 1 - ON */
+                bullets    : "1"      /* Show navigation Bullets, 0 - OFF, 1 - ON */
+            });
+        });
+    </script>
+    <!-- ****************** /STEP 1: INCLUDE FOLLOWING IN YOUR <HEAD> ***************** -->
+</head>
+<body>
+    
+    <!-- ****************** STEP 2: INCLUDE THE HTML PART ****************** -->
+    <div class="fws2" id="fws2-instance1">
+        <div class="slider_container">
+            
+            
+            <!-- ****************** STEP 3: DUPLICATE TO ADD MORE SLIDES ****************** -->
+            <div class="slide"> 
+                <img src="img/slide_1.jpg" alt=""> <!-- Slide image -->
+                <div class="slide_content">
+                    <div class="slide_content_wrap">
+                        <h4 class="title">Slide 1</h4>               <!-- Text title -->
+                        <p class="description">Description Text</p>  <!-- Text description -->
+                        <a class="readmore" href="#">Read More</a>   <!-- Read More button -->
+                    </div>
+                </div>
+            </div>
+            <!-- ****************** /STEP 3: DUPLICATE TO ADD MORE SLIDES ****************** -->
+            
+            <!-- demo slides (you can delete these) -->    
+            <div class="slide"> 
+                <img src="img/slide_2.jpg" alt="">
+                <div class="slide_content">
+                    <div class="slide_content_wrap">
+                        <h4 class="title">Slide 2</h4>
+                        <p class="description">Description Text</p>
+                        <a class="readmore" href="#">Read More</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="slide"> 
+                <img src="img/slide_3.jpg" alt="">
+                <div class="slide_content">
+                    <div class="slide_content_wrap">
+                        <h4 class="title">Slide 3</h4>
+                        <p class="description">Description Text</p>
+                        <a class="readmore" href="#">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <!-- /demo slides (you can delete these) -->    
+            
+            
+        </div>
+        <div class="slidePrev"><i class="fa fa-chevron-left"></i></div>
+        <div class="slideNext"><i class="fa fa-chevron-right"></i></div>
+        <div class="timers"></div>
+        <div class="bullets"></div>
+    </div>
+    <!-- ****************** /STEP 2: INCLUDE THE HTML PART ****************** -->
+    
+</body>
+</html>

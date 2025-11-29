@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<title>Replete Modal - YouTube</title>
+		<link rel="stylesheet" href="css/animate.css">
+		<link rel="stylesheet" href="css/replete-modal.css">
+			
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="js/replete-modal.js"></script>
+		<style>
+			a{cursor: pointer;border: 1px solid black; padding: 7px 14px; text-align: center;}
+		</style>
+	</head>
+	<body style="margin:50 auto; width:200px;">
+		<a class="youtube" >youtube</a>
+		<script>
+			$('.youtube').on('click',function(){
+				rplm({
+					title: "Get Close With Nature",
+					imageUrl: "img/nature.png",
+					html: true,
+					showConfirmButton: false,
+					animation: 'fadeIn',
+					allowOutsideClick: true,
+					modalNOverlay: 'black',
+					youtubeID: "mcixldqDIEQ",
+					videoHeight: "315",
+					videoWidth: "100%",
+				});
+			});
+		</script>
+	</body>
+</html>

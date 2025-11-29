@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<title>Replete Modal - Vimeo</title>
+		<link rel="stylesheet" href="css/animate.css">
+		<link rel="stylesheet" href="css/replete-modal.css">
+			
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="js/replete-modal.js"></script>
+		<style>
+			a{cursor: pointer;border: 1px solid black; padding: 7px 14px; text-align: center;}
+		</style>
+	</head>
+	<body style="margin:50 auto; width:200px;">
+		<a class="vimeo" >vimeo</a>
+		<script>
+			$('.vimeo').on('click',function(){
+				rplm({
+					title: "Nature On Vimeo",
+					imageUrl: "img/nature.png",
+					html: true,
+					showConfirmButton: false,
+					animation: 'fadeIn',
+					allowOutsideClick: true,
+					modalNOverlay: 'black',
+					vimeoID: "95746815",
+					videoHeight: "315",
+					videoWidth: "100%",
+				});
+			});
+		</script>
+	</body>
+</html>

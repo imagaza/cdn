@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<title>Replete Modal - Success State</title>
+		<link rel="stylesheet" href="css/animate.css">
+		<link rel="stylesheet" href="css/replete-modal.css">
+			
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="js/replete-modal.js"></script>
+		<style>
+			a{cursor: pointer;border: 1px solid black; padding: 7px 14px; text-align: center;}
+		</style>
+	</head>
+	<body style="margin:50 auto; width:200px;">
+        <a class="sucState">Success State</a>
+		<script>
+			$('.sucState').on('click',function(){
+				rplm({
+					title: "Success",
+					text: 'Congratulations!! Finally you get this page.',
+					type: 'success',
+					html: true,
+					modalNOverlay: 'white',
+					confirmButtonText: 'Done',
+					allowOutsideClick: true,
+				});
+			});
+		</script>
+	</body>
+</html>

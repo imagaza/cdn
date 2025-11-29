@@ -1,0 +1,21 @@
+/**
+ * Owl Carousel v2.3.4
+ * Copyright 2013-2018 David Deutsch
+ * Licensed under: SEE LICENSE IN https://github.com/OwlCarousel2/OwlCarousel2/blob/master/LICENSE
+ */
+.owl-theme .owl-dots,.owl-theme .owl-nav{text-align:center;-webkit-tap-highlight-color:transparent;margin-bottom:6px;margin-top:-6px;}
+.owl-theme .owl-nav{margin-top:0px;}
+.owl-theme .owl-nav [class*=owl-]{color:#FFF;font-size:14px;margin:5px;padding:4px 7px;background:#D6D6D6;display:inline-block;cursor:pointer;border-radius:3px}
+.owl-theme .owl-nav [class*=owl-]:hover{background:#869791;color:#FFF;text-decoration:none}
+.owl-theme .owl-nav .disabled{opacity:.5;cursor:default}
+.owl-theme .owl-nav.disabled+.owl-dots{margin-top:10px}
+.owl-theme .owl-dots .owl-dot{display:inline-block;zoom:1}
+.owl-theme .owl-dots .owl-dot span{width:10px;height:10px;margin:5px 7px;background:#D6D6D6;display:block;-webkit-backface-visibility:visible;transition:opacity .2s ease;border-radius:30px}
+.owl-theme .owl-dots .owl-dot.active span,.owl-theme .owl-dots .owl-dot:hover span{background:#869791}
+.nav-slider{display:block;width:100%;position:absolute;top:14px;float:left;}
+.nav-slider .btn-geri{position:absolute;left:10px;width:18px;height:18px;cursor:pointer;}
+.nav-slider .btn-ileri{position:absolute;right:10px;width:18px;height:18px;cursor:pointer;}
+.nav-slider .btn-geri::before{content:'\f137 ';font:normal normal normal 14px/1 FontAwesome;font-size:20px;color:#FF5722;display:inline-block;left:0;width:auto;height:auto;position:absolute;}
+.nav-slider .btn-ileri::before{content:'\f138';font:normal normal normal 14px/1 FontAwesome;font-size:20px;color:#FF5722;display:inline-block;left:0;width:auto;height:auto;position:absolute;}
+.nav-slider .btn-geri:hover::before{opacity:0.7;}
+.nav-slider .btn-ileri:hover::before{opacity:0.7;}

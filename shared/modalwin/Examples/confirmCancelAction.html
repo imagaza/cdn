@@ -1,0 +1,48 @@
+<html>
+	<head>
+		<title>Replete Modal - Confirm & Cancel Action</title>
+		<link rel="stylesheet" href="css/animate.css">
+		<link rel="stylesheet" href="css/replete-modal.css">
+			
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="js/replete-modal.js"></script>
+		<style>
+			a{cursor: pointer;border: 1px solid black; padding: 7px 14px; text-align: center;}
+		</style>
+	</head>
+	<body style="margin:50 auto; width:200px;">
+		<a class="confirmCancel">Confirm &amp; Cancel </a>
+		<script>
+			$('.confirmCancel').on('click',function(){
+				rplm({
+						title: "Confirm",
+						text: "Do you want to remove this file?",
+						type: "warning",
+						showCancelButton: true,
+						confirmButtonText: "Yes, Remove!",
+						cancelButtonText: "No, Cancel Remove!",
+						closeOnConfirm: false,
+						closeOnCancel: false
+					},
+					function(isConfirm){
+						if (isConfirm) {
+							rplm({
+								title: "Removed!",
+								text: "Your file has been removed.",
+								type: "success",
+		                        confirmButtonText: 'Done',
+		                    });
+						}
+						else{
+							rplm({
+								title: "Cancelled!",
+								text: "Your file is Safe.",
+								type: "error",
+		                        confirmButtonText: 'Done',
+		                    });
+						}
+				});
+			});
+		</script>
+	</body>
+</html>

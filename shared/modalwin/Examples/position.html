@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<title>Replete Modal - Positions</title>
+		<link rel="stylesheet" href="css/animate.css">
+		<link rel="stylesheet" href="css/replete-modal.css">
+			
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="js/replete-modal.js"></script>
+		<style>
+			a{cursor: pointer;border: 1px solid black; padding: 7px 14px; text-align: center;}
+		</style>
+	</head>
+	<body style="margin:50 auto; width:200px;">
+		<a class="topcenter">Top Center Position</a>
+		<script>
+			$('.topcenter').on('click',function(){
+				rplm({
+					title: "Top Center",
+					text: "Gummies ice cream liquorice powder. Pastry lemon drops lemon drops icing oat cake oat cake. Candy canes cotton candy bear claw icing jelly oat cake icing.",
+					html: true,
+					position:'topCenter', // Use any positions from below options
+					showCloseButton: true,
+					closeButtonWithInModal: true,
+					confirmButtonText: 'Done',
+					allowOutsideClick: true,
+					width: '580px'
+				});
+			});
+		</script>
+		<!-- All Modal Positions -->
+		<!-- topleft,topcenter,topright,leftcenter,center,rightcenter,bottomleft,bottomcenter,bottomright -->
+	</body>
+</html>

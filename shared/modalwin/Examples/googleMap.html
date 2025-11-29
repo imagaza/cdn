@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<title>Replete Modal - Google Map</title>
+		<link rel="stylesheet" href="css/animate.css">
+		<link rel="stylesheet" href="css/replete-modal.css">
+			
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="js/replete-modal.js"></script>
+		<style>
+			a{cursor: pointer;border: 1px solid black; padding: 7px 14px; text-align: center;}
+		</style>
+	</head>
+	<body style="margin:50 auto; width:200px;">
+        <a class="map">Google Map</a>
+		<script>
+			$('.map').on('click',function(){
+			    rplm({
+			        title: "Google Map",
+			        text: '<div id="map" style="width:100%;height:400px;"></div>',
+			        type: 'map',
+			        lat: 23.0060,
+			        lng: 72.6011,
+			        zoom: 10,
+			        html: true,
+			        showCancelButton: false,
+			        closeOnConfirm: false,
+			        showConfirmButton: false,
+			        animation: 'rollIn',
+			        allowOutsideClick: "true",
+			        modalNOverlay: 'white'
+			    });
+			});
+		</script>
+		<script src="https://maps.googleapis.com/maps/api/js"></script>
+	</body>
+</html>

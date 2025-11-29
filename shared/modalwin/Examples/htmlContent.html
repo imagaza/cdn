@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<title>Replete Modal - HTML Content</title>
+		<link rel="stylesheet" href="css/animate.css">
+		<link rel="stylesheet" href="css/replete-modal.css">
+			
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="js/replete-modal.js"></script>
+		<style>
+			a{cursor: pointer;border: 1px solid black; padding: 7px 14px; text-align: center;}
+		</style>
+	</head>
+	<body style="margin:50 auto; width:200px;">
+		<a class="html">HTML Content</a>
+		<script>
+			$('.html').on('click',function(){
+				rplm({
+					title: "HTML <i> Section </i>",
+					text: '<h1>This is Heading1</h1><br><p>Custom <span style="font-size:1em; color:#A6E22D;"> HTML</span> Section Message.</p>',
+					html: true,
+					animation: 'swing',
+					modalNOverlay: 'black',
+		            confirmButtonText: 'Done',
+		            allowOutsideClick: true,
+		        });
+			});
+		</script>
+	</body>
+</html>

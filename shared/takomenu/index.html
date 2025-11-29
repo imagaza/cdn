@@ -1,0 +1,75 @@
+
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+        <script type="text/javascript">
+            $(function() {
+                var showmenu = $('#showmenu');
+                menu = $('nav ul.nav');
+                menuHeight = menu.height();
+
+                $(showmenu).on('click', function(e) {
+                    e.preventDefault();
+                    menu.slideToggle();
+                });
+            });
+
+            $(window).resize(function() {
+                var w = $(window).width();
+                if (w > 320 && menu.is(':hidden')) {
+                    menu.removeAttr('style');
+                }
+            });
+        </script>
+
+    
+
+        <nav> <a href="#" id="showmenu">Menu <i class="icon-reorder"></i></a> 
+            <ul class="nav">
+                
+                
+                
+                
+                
+                
+                
+               
+                <li><a href=""><em class="icon-dropbox"></em> Products <i class="icon-chevron-right first"></i></a>
+
+                    <ul class="second-level">
+                        <li><a href="">Books</a>
+                        </li>
+                        <li><a href="">Movies<i class="icon-chevron-right"></i></a>
+
+                            <ul class="third-level">
+                                <li><a href="#">Action</a>
+                                </li>
+                                <li><a href="#">Family</a>
+                                </li>
+                                <li><a href="#">Comedy</a>
+                                </li>
+                                <li><a href="#">Crime</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="">Toys</a>
+                        </li>
+                        <li><a href="">Clothing<i class="icon-chevron-right"></i></a>
+
+                            <ul class="third-level">
+                                <li><a href="">T-Shirts</a>
+                                </li>
+                                <li><a href="">Pants</a>
+                                </li>
+                                <li><a href="">Shoes</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="">Sports</a>
+                        </li>
+                    </ul>
+                </li>
+                
+                
+            </ul>
+        </nav>

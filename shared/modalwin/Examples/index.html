@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Replete Modal Demo</title>
+
+    <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <link href='https://fonts.googleapis.com/css?family=Quicksand:400,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/replete-modal.css">
+
+    <!-- Custom Fonts -->
+    <link href="fonts/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="fonts/stylesheet.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" class="index">
+
+    <div class="blur-overlay">
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#page-top">
+                    Replete Modal
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#examples">Examples</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#types">Types</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#overlay">Overlay</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#animation">Animation</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#position">Position</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#candies">Candies</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#svg">SVG</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#features">Featurs</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="intro-text">
+                        <span class="name">Replete Modal</span>
+                        <hr class="star-light">
+                        <span class="skills">Replete Modal is a user-friendly, fully customizable, responsive jQuery popup modal to take any HTML content, including images, videos, SVG icons,forms and display it in a clean organised and responsive popup. It is easy, flexible, powerful to create professional looking popup modal. This plugin features plenty of layouts, CSS transitions, SVG Icons, and animations, 9 Position, 40+ animations, 5 Overlay, 10 Modal Layouts, 10 Modal Types, 35+ SVG Icons and much more.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    
+    <!-- Simple Examples -->
+    <section id="examples">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Simple Examples Section</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 links">
+                    <a class="subscribe">Subscribe Form</a>
+                </div>
+                <div class="col-lg-4 links">
+                    <a class="adv">Advertisement</a>
+                </div>
+                <div class="col-lg-4 links">
+                    <a class="contact">Contact Form</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 links">
+                    <a class="login">Login Form</a>
+                </div>
+                <div class="col-lg-4 links">
+                    <a class="register">Register Form</a>
+                </div>
+                <div class="col-lg-4 links">
+                    <a class="comment">Comment Form</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 links">
+                    <a class="booking">Booking Form</a>
+                </div>
+                <div class="col-lg-4 links">
+                    <a class="feedback">Feedback Form</a>
+                </div>
+                <div class="col-lg-4 links">
+                    <a class="tsheet">Time Sheet Form</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 links">
+                    <a class="delay">Time Delay(2s)</a>
+                </div>
+                <div class="col-lg-4 links">
+                    <a class="duration">Modal Duration(2s)</a>
+                </div>
+                <div class="col-lg-4 links">
+                    <a class="delayDura">Delay(1s) & Duration(2s)</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 links">
+                    <a class="ajax-submit">Ajax Submit</a>
+                </div>
+                <div class="col-lg-4 links">
+                    <a class="map">Google Map</a>
+                </div>
+                <div class="col-lg-4 links">
+                    <a class="cookie">Block Modal(set cookie)</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 links">
+                    <a class="youtube rplm-youtube" data-youtube="mcixldqDIEQ" data-utubeWidth="100%" data-utubeHeight="315">Youtube Video</a>
+                </div>
+                <div class="col-lg-6 links">
+                    <a class="vimeo rplm-vimeo" data-vimeo="95746815" data-vimeoWidth="100%" data-vimeoHeight="280">Vimeo Video</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Different Form Types Section -->
+    <section class="success" id="types">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Different Types of Modal</h2>
+                    <hr class="star-light">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 links alt">
+                    <a class="sucState">Success State</a>
+                </div>
+                <div class="col-lg-4 links alt">
+                    <a class="error">Error State</a>
+                </div>
+                <div class="col-lg-4 links alt">
+                    <a class="warning">Warning State</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 links alt">
+                    <a class="infoState">Information State </a>
+                </div>
+                <div class="col-lg-4 links alt">
+                    <a class="confirmAction">Confirm Action </a>
+                </div>
+                <div class="col-lg-4 links alt">
+                    <a class="confirmCancel">Confirm &amp; Cancel </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 links alt">
+                    <a class="html">HTML Title &amp; Text</a>
+                </div>
+                <div class="col-lg-4 links alt">
+                    <a class="timer">Close On Timer</a>
+                </div>
+                <div class="col-lg-4 links alt">
+                    <a class="validation">Confirm Validation </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 links alt">
+                    <a class="ajax">Ajax Call</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overlay Section -->
+    <section id="overlay">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Background Effects</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 links">
+                    <a class="blackoverlay">Black Background</a>
+                </div>
+                <div class="col-lg-4 links">
+                    <a class="whiteoverlay">White Background</a>
+                </div>
+                <div class="col-lg-4 links">
+                    <a class="customoverlay">Custom Color Background</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 links">
+                    <a class="transparentoverlay">Transparent Background</a>
+                </div>
+                <div class="col-lg-6 links">
+                    <a class="bluroverlay">Blur Background</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Animation Section -->
+    <section class="success" id="animation">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Animations</h2>
+                    <hr class="star-light">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 links alt">
+                    <a class="bounce">Bounce</a>
+                </div>
+                <div class="col-lg-4 links alt">
+                    <a class="flash">Flash</a>
+                </div>
+                <div class="col-lg-4 links alt">
+                    <a class="pulse">Pulse</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 links alt">
+                    <a class="rubberBand">Rubber Band</a>
+                </div>
+                <div class="col-lg-4 links alt">
+                    <a class="shake">Shake</a>
+                </div>
+                <div class="col-lg-4 links alt">
+                    <a class="swing">Swing</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 links alt">
+                    <a class="tada">Tada</a>
+                </div>
+                <div class="col-lg-4 links alt">
+                    <a class="wobble">Wobble</a>
+                </div>
+                <div class="col-lg-4 links alt">
+                    <a class="jello">Jello</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 links alt">
+                    <a class="bounceIn">BounceIn</a>
+                </div>
+                <div class="col-lg-4 links alt">
+                    <a class="bounceInDown">BounceInDown</a>
+                </div>
+                <div class="col-lg-4 links alt">
+                    <a class="bounceInLeft">BounceInLeft</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 links alt">
+                    <a class="bounceInRight">BounceInRight</a>
+                </div>
+                <div class="col-lg-4 links alt">
+                    <a class="bounceInUp">BounceInUp</a>
+                </div>
+                <div class="col-lg-4 links alt">
+                    <a class="fadeIn">FadeIn</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 links alt">
+                    <a class="fadeInDown">FadeInDown</a>
+                </div>
+                <div class="col-lg-4 links alt">
+                    <a class="fadeInDownBig">FadeInDownBig</a>
+                </div>
+                <div class="col-lg-4 links alt">
+                    <a class="fadeInLeft">FadeInLeft</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 links alt">
+                    <a class="fadeInLeftBig">FadeInLeftBig</a>
+                </div>
+                <div class="col-lg-4 links alt">
+                    <a class="fadeInRight">FadeInRight</a>
+                </div>
+                <div class="col-lg-4 links alt">
+                    <a class="fadeInRightBig">FadeInRightBig</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 links alt">
+                    <a class="fadeInUp">FadeInUp</a>
+                </div>
+                <div class="col-lg-4 links alt">
+                    <a class="fadeInUpBig">FadeInUpBig</a>
+                </div>
+                <div class="col-lg-4 links alt">
+                    <a class="flipInX">FlipInX</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 links alt">
+                    <a class="flipInY">FlipInY</a>
+                </div>
+                <div class="col-lg-4 links alt">
+                    <a class="lightSpeedIn">LightSpeedIn</a>
+                </div>
+                <div class="col-lg-4 links alt">
+                    <a class="rotateIn">Rotate</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 links alt">
+                    <a class="rotateInDownLeft">RotateInDownLeft</a>
+                </div>
+                <div class="col-lg-4 links alt">
+                    <a class="rotateInDownRight">RotateInDownRight</a>
+                </div>
+                <div class="col-lg-4 links alt">
+                    <a class="rotateInUpLeft">RotateInUpLeft</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 links alt">
+                    <a class="rotateInUpRight">RotateInUpRight</a>
+                </div>
+                <div class="col-lg-4 links alt">
+                    <a class="slideInUp">SlideInUp</a>
+                </div>
+                <div class="col-lg-4 links alt">
+                    <a class="slideInDown">SlideInDown</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 links alt">
+                    <a class="slideInLeft">SlideInLeft</a>
+                </div>
+                <div class="col-lg-4 links alt">
+                    <a class="slideInRight">SlideInRight</a>
+                </div>
+                <div class="col-lg-4 links alt">
+                    <a class="zoomIn">ZoomIn</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 links alt">
+                    <a class="zoomInDown">ZoomInDown</a>
+                </div>
+                <div class="col-lg-4 links alt">
+                    <a class="zoomInLeft">ZoomInLeft</a>
+                </div>
+                <div class="col-lg-4 links alt">
+                    <a class="zoomInRight">ZoomInRight</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 links alt">
+                    <a class="zoomInUp">ZoomInUp</a>
+                </div>
+                <div class="col-lg-6 links alt">
+                    <a class="rollIn">RollIn</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Position Section -->
+    <section id="position">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Position</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 links">
+                    <a class="topleft">TopLeft</a>
+                </div>
+                <div class="col-lg-4 links">
+                    <a class="topcenter">TopCenter</a>
+                </div>
+                <div class="col-lg-4 links">
+                    <a class="topright">TopRight</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 links">
+                    <a class="leftcenter">LeftCenter</a>
+                </div>
+                <div class="col-lg-4 links">
+                    <a class="center">Center</a>
+                </div>
+                <div class="col-lg-4 links">
+                    <a class="rightcenter">RightCenter</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 links">
+                    <a class="bottomleft">BottomLeft</a>
+                </div>
+                <div class="col-lg-4 links">
+                    <a class="bottomcenter">BottomCenter</a>
+                </div>
+                <div class="col-lg-4 links">
+                    <a class="bottomright">BottomRight</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Candies Section -->
+    <section class="success" id="candies">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Modal Candies Section</h2>
+                    <hr class="star-light">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 links alt">
+                    <a class="whiteCandie">White Modal</a>
+                </div>
+                <div class="col-lg-4 links alt">
+                    <a class="blackCandie">Black Modal</a>
+                </div>
+                <div class="col-lg-4 links alt">
+                    <a class="customCandie">Custom Color Modal</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 links alt">
+                    <a class="squareCandie">Round Border Modal</a>
+                </div>
+                <div class="col-lg-4 links alt">
+                    <a class="transparentCandie">Transparent Modal</a>
+                </div>
+                <div class="col-lg-4 links alt">
+                    <a class="backShadowCandie">Back Shadow Modal</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 links alt">
+                    <a class="closeIconIn">Close Icon Inside</a>
+                </div>
+                <div class="col-lg-4 links alt">
+                    <a class="closeIconOut">Close Icon Outside</a>
+                </div>
+                <div class="col-lg-4 links alt">
+                    <a class="closeTextIn">Close Text Inside</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 links alt">
+                    <a class="closeTextOut">Close Text Outside</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Example Forms -->
+    <p class="paragraph" style="display:none;">Cheesecake bonbon lollipop danish cake liquorice. Fruitcake candy sesame snaps topping donut bear claw bonbon tootsie roll. Pudding sugar plum jelly-o.</p>
+    <div class="contactForm" style="display:none;">
+        <input type="text" placeholder="Your Name" class="name" name="name">
+        <input type="email" placeholder="Your Email" class="email" name="email">
+        <input type="text" placeholder="Your Phone" class="phone" name="phone">
+        <input type="text" placeholder="Your Message" class="message" name="message">
+    </div>
+    <div class="loginForm" style="display:none;">
+        <input type="email" placeholder="Your Email" class="email" name="email">
+        <input type="password" placeholder="Enter Password" class="password" name="password">
+        <div class="left span6">
+        <input type="checkbox" id="remember" name="remember" checked><span>Keep me logged in</span>
+        </div>
+        <div class="right span6">
+        <a href="#" class="modal-opener">Forgot password?</a>
+        </div>
+    </div>
+    <div class="registerForm" style="display:none;">
+        <div class="left span6">
+        <input type="text" placeholder="First Name" class="fname" name="fname">
+        </div>
+        <div class="right span6">
+        <input type="text" placeholder="Last Name" class="lname" name="lname">
+        </div>
+        <input type="email" placeholder="Your Email" class="email" name="email">
+        <input type="password" placeholder="Enter Password" class="password" name="password">
+    </div>
+    <div class="commentForm" style="display:none;">
+        <div class="left span6">
+        <input type="text" placeholder="First Name" class="fname" name="fname">
+        </div>
+        <div class="right span6">
+        <input type="text" placeholder="Last Name" class="lname" name="lname">
+        </div>
+        <input type="email" placeholder="Your Email" class="email" name="email">
+        <textarea name="Message" id="Message" placeholder="Comment"></textarea>
+    </div>
+    <div class="bookingForm" style="display:none;">
+        <input type="text" placeholder="Full Name" class="name" name="name">
+        <div class="left span6">
+        <input type="email" placeholder="Your Email" class="email" name="email">
+        </div>
+        <div class="right span6">
+        <input type="text" placeholder="Phone Number" class="phone" name="phone">
+        </div>
+        <div class="left span6">
+        <input type="text" placeholder="No Of Adults" class="guests" name="guests">
+        </div>
+        <div class="right span6">
+        <input type="text" placeholder="No Of Children" class="children" name="children">
+        </div>
+        <div class="left span6">
+        <input type="text" name="checkIn" id="checkIn" placeholder="mm/dd/yyyy" />
+        </div>
+        <div class="right span6">
+        <input type="text" placeholder="mm/dd/yyyy" class="checkOut" name="checkOut">
+        </div>
+        <textarea name="message" id="message" placeholder="Comment/Message"></textarea>
+    </div>
+    <div class="feedbackForm" style="display:none;">
+        <input type="text" placeholder="Full Name" class="name" name="name">
+        <input type="email" placeholder="Your Email" class="email" name="email">
+        <select name="department" id="department">
+            <option value="department">SelectDepartment</option>
+            <option value="hr">HR</option>
+            <option value="manager">Manager</option>
+            <option value="technical">Technical</option>
+            <option value="marketing">Marketing</option>
+            <option value="hardware">Hardware</option>
+        </select>
+        <textarea name="message" id="message" placeholder="Comment/Message"></textarea>
+    </div>
+    <div class="tsheetForm" style="display:none;">
+        <input type="text" placeholder="Employee Name" class="name" name="name">
+        <input type="text" placeholder="Project" class="project" name="project">
+        <input type="text" placeholder="Date" class="date" name="date">
+        <input type="text" placeholder="Hours" class="hours" name="hours">
+        <textarea name="Tasks" id="Tasks" placeholder="Tasks"></textarea>
+    </div>
+    <div class="advForm" style="display:none;">
+        <a href="http://google.com" target="_blank"><img src="img/adv.jpg" height="250" alt="Advertise"></a>
+    </div>
+    <div class="youtubeFrame" style="display:none;">
+        <iframe height="315" src="https://www.youtube.com/embed/mcixldqDIEQ" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="vimeoFrame" style="display:none;">
+        <iframe src="https://player.vimeo.com/video/95746815" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </div>
+
+    <!-- Example Forms End -->
+    
+    <!--  SVG Icons -->
+    <section id="svg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>SVG Icons Section</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 links">
+                    <a class="svg" data-icon="browser">Browser SVG Icon</a>
+                </div>
+                <div class="col-lg-4 links">
+                    <a class="svg" data-icon="brush">Brush SVG Icon</a>
+                </div>
+                <div class="col-lg-4 links">
+                    <a class="svg" data-icon="calander">Calander SVG Icon</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 links">
+                    <a class="svg" data-icon="camera">Camera SVG Icon</a>
+                </div>
+                <div class="col-lg-4 links">
+                    <a class="svg" data-icon="clock">Clock SVG Icon</a>
+                </div>
+                <div class="col-lg-4 links">
+                    <a class="svg" data-icon="coffee">Coffee SVG Icon</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 links">
+                    <a class="svg" data-icon="diamond">Diamond SVG Icon</a>
+                </div>
+                <div class="col-lg-4 links">
+                    <a class="svg" data-icon="disk">Disk SVG Icon</a>
+                </div>
+                <div class="col-lg-4 links">
+                    <a class="svg" data-icon="email">Email SVG Icon</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 links">
+                    <a class="svg" data-icon="graph">Graph SVG Icon</a>
+                </div>
+                <div class="col-lg-4 links">
+                    <a class="svg" data-icon="heart">Heart SVG Icon</a>
+                </div>
+                <div class="col-lg-4 links">
+                    <a class="svg" data-icon="home">Home SVG Icon</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 links">
+                    <a class="svg" data-icon="lightning">Lightning SVG Icon</a>
+                </div>
+                <div class="col-lg-4 links">
+                    <a class="svg" data-icon="location">Location SVG Icon</a>
+                </div>
+                <div class="col-lg-4 links">
+                    <a class="svg" data-icon="lock">Lock SVG Icon</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 links">
+                    <a class="svg" data-icon="magnify">Magnify SVG Icon</a>
+                </div>
+                <div class="col-lg-4 links">
+                    <a class="svg" data-icon="message">Message SVG Icon</a>
+                </div>
+                <div class="col-lg-4 links">
+                    <a class="svg" data-icon="mic">Mic SVG Icon</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 links">
+                    <a class="svg" data-icon="paper">Paper SVG Icon</a>
+                </div>
+                <div class="col-lg-4 links">
+                    <a class="svg" data-icon="pencil">Pencil SVG Icon</a>
+                </div>
+                <div class="col-lg-4 links">
+                    <a class="svg" data-icon="phone">Phone SVG Icon</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 links">
+                    <a class="svg" data-icon="picture">Picture SVG Icon</a>
+                </div>
+                <div class="col-lg-4 links">
+                    <a class="svg" data-icon="plane">Plane SVG Icon</a>
+                </div>
+                <div class="col-lg-4 links">
+                    <a class="svg" data-icon="present">Present SVG Icon</a>
+                </div>
+            </div>
+             <div class="row">
+                <div class="col-lg-4 links">
+                    <a class="svg" data-icon="robot">Robot SVG Icon</a>
+                </div>
+                <div class="col-lg-4 links">
+                    <a class="svg" data-icon="rocket">Rocket SVG Icon</a>
+                </div>
+                <div class="col-lg-4 links">
+                    <a class="svg" data-icon="screen">Screen SVG Icon</a>
+                </div>
+            </div>
+             <div class="row">
+                <div class="col-lg-4 links">
+                    <a class="svg" data-icon="settings">Settings SVG Icon</a>
+                </div>
+                <div class="col-lg-4 links">
+                    <a class="svg" data-icon="spaceship">Spaceship SVG Icon</a>
+                </div>
+                <div class="col-lg-4 links">
+                    <a class="svg" data-icon="storm">Storm SVG Icon</a>
+                </div>
+            </div>
+             <div class="row">
+                <div class="col-lg-4 links">
+                    <a class="svg" data-icon="suitcase">Suitcase SVG Icon</a>
+                </div>
+                <div class="col-lg-4 links">
+                    <a class="svg" data-icon="tag">Tag SVG Icon</a>
+                </div>
+                <div class="col-lg-4 links">
+                    <a class="svg" data-icon="trash">Trash SVG Icon</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 links">
+                    <a class="svg" data-icon="thumbsup">ThumbsUp SVG Icon</a>
+                </div>
+                <div class="col-lg-6 links">
+                    <a class="svg" data-icon="thumbsdown">Thumbs Down SVG Icon</a>
+                </div>
+            </div>
+             <div class="row">
+                <div class="col-lg-6 links">
+                    <a class="svg" data-icon="user">User SVG Icon</a>
+                </div>
+                <div class="col-lg-6 links">
+                    <a class="svg" data-icon="winner">Winner SVG Icon</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Features Section -->
+    <section id="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Modal Features</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+            <ul>
+                <div class="row">
+                    <div class="col-lg-4 features">
+                        <li>
+                            <i class="fa fa-ellipsis-h"></i>
+                            <h3>9 Position</h3>
+                            <p>Replete modal opens with 9 different positions on the screen.</p>
+                        </li>
+                    </div>
+                    <div class="col-lg-4 features">
+                        <li>
+                            <i class="fa fa-paint-brush"></i>
+                            <h3>5 Overlay</h3>
+                            <p>Replete Modal have 5 different backgroud overlay style and easy customization of overlay.</p>
+                        </li>
+                    </div>
+                    <div class="col-lg-4 links features">
+                        <li>
+                            <i class="fa fa-film"></i>
+                            <h3>40+ Animations</h3>
+                            <p>Smooth and beautiful animations based on CSS3: flip, bounce, fade, rotate and many more slide effects.</p>
+                        </li>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 features">
+                        <li>
+                            <i class="fa fa-meanpath"></i>
+                            <h3>10 Modal Layouts</h3>
+                            <p>Effective and Attractive Modal Layouts.Totally different modal layouts with 10 different Modal Layouts.</p>
+                        </li>
+                    </div>
+                    <div class="col-lg-4 features">
+                        <li>
+                            <i class="fa fa-twitch"></i>
+                            <h3>10 Modal Types</h3>
+                            <p>Different Modal types with close button on right corner and with different states like Success, Error etc.</p>
+                        </li>
+                    </div>
+                    <div class="col-lg-4 features">
+                        <li>
+                            <i class="fa fa-info"></i>
+                            <h3>35+ SVG Icons</h3>
+                            <p>SVG Icons is a best part of the modal. Too easy and simple to use SVG Icons with name of the icon.</p>
+                        </li>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 features">
+                        <li>
+                            <i class="fa fa-tablet"></i>
+                            <h3>Responsive Design</h3>
+                            <p>A fully responsive layout that adapts perfectly for all device resolutions like mobiles, tablets and desktops.</p>
+                        </li>
+                    </div>
+                    <div class="col-lg-4 features">
+                        <li>
+                            <i class="fa fa-picture-o"></i>
+                            <h3>Any Content</h3>
+                            <p>You can use any HTML elements inside tabs content: text, images, video, forms, etc.</p>
+                        </li>
+                    </div>
+                    <div class="col-lg-4 features">
+                        <li>
+                            <i class="fa fa-font"></i>
+                            <h3>Typography Set</h3>
+                            <p>Includes headings, paragraphs, images, unordered and ordered lists, etc.</p>
+                        </li>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 features">
+                        <li>
+                            <i class="fa fa-archive"></i>
+                            <h3>15+ Useful Examples</h3>
+                            <p>You can use these examples as a base for creation your own popup modals simple and fast.</p>
+                        </li>
+                    </div>
+                    <div class="col-lg-4 features">
+                        <li>
+                            <i class="fa fa-eye"></i>
+                            <h3>Retina Support</h3>
+                            <p>Optimized to support the high quality and crisp graphics on retina screens.</p>
+                        </li>
+                    </div>
+                    <div class="col-lg-4 features">
+                        <li>
+                            <i class="fa fa-html5"></i>
+                            <h3>HTML5 and CSS3</h3>
+                            <p>Take full advantage of modern web technologies. Semantic HTML markup and standards compliant CSS.</p>
+                        </li>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 features">
+                        <li>
+                            <i class="fa fa-globe"></i>
+                            <h3>Cross-Browser</h3>
+                            <p>Tested on Windows (Chrome, Firefox, Opera, IE9, IE10), Mac (Safari, Chrome, Firefox, Opera), iOS (iPhone, iPad) and Android.</p>
+                        </li>
+                    </div>
+                    <div class="col-lg-4 features">
+                        <li>
+                            <i class="fa fa-book"></i>
+                            <h3>Documentation</h3>
+                            <p>Extensive step-by-step guide to help you with usage and customization.</p>
+                        </li>
+                    </div>
+                    <div class="col-lg-4 features">
+                        <li>
+                            <i class="fa fa-comments"></i>
+                            <h3>Lifetime Support</h3>
+                            <p>To get support please send me an email through the contact form on <a href="http://codecanyon.net/user/geekslabs?ref=geekslabs">my profile page</a>.</p>
+                        </li>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 features">
+                        <li>
+                            <i class="fa fa-download"></i>
+                            <h3>Free Updates</h3>
+                            <p>Products get maintained with improvements and bug fixes.</p>
+                        </li>
+                    </div>
+                    <div class="col-lg-4 features">
+                        <li>
+                            <i class="fa fa-expand"></i>
+                            <h3>Custom Width</h3>
+                            <p>Unique feature for replete modal. You can define custom width for your modal.</p>
+                        </li>
+                    </div>
+                    <div class="col-lg-4 features">
+                        <li>
+                            <i class="fa fa-thumb-tack"></i>
+                            <h3>Set Cookie</h3>
+                            <p>To prevent ot block pop up, you can set cookie according to your choice from given options </p>
+                        </li>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="footer-above">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col col-md-6">
+                        <h3>Around the Web</h3>
+                        <ul class="list-inline">
+                            <li>
+                                <a href="https://www.facebook.com/geekslabs" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/geekslabs" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/company/geekslabs" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
+                            </li>
+                            <li>
+                                <a href="http://geekslabs.com/feed/" class="btn-social btn-outline"><i class="fa fa-fw fa-rss"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-col col-md-6">
+                        <h3>About GeeksLabs</h3>
+                        <p>We’re a creative web design team that specializes in Premium Wordpress Themes, plugins and Site Templates.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        Copyright &copy; GeeksLabs 2016
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-top page-scroll visible-xs visible-sm">
+        <a class="btn btn-primary" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- This is what you need -->
+    <script src="js/replete-modal.js"></script>
+    <script src="js/custom.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="js/classie.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/demo.js"></script>
+
+<script>
+$('.map').on('click',function(){
+    rplm({
+        title: "Google Map",
+        text: '<div id="map" style="width:100%;height:400px;"></div>',
+        type: 'map',
+        lat: 23.0060,
+        lng: 72.6011,
+        zoom: 10,
+        html: true,
+        showCancelButton: false,
+        closeOnConfirm: false,
+        showConfirmButton: false,
+        animation: 'zoomIn',
+        allowOutsideClick: "true",
+        modalNOverlay: 'white'
+    });
+});
+
+</script>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+</div>
+</body>
+
+</html>

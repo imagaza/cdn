@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Canvas Slicer</title>
+	<link rel="shortcut icon" href="./favicon.ico">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://bootswatch.com/4/solar/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdn.rawgit.com/needim/noty/77268c46/lib/noty.css">
+	<link rel="stylesheet" href="http://demo.wezom.agency/slicer/static/prismjs/prism.css">
+	<link rel="stylesheet" href="http://demo.wezom.agency/slicer/static/prismjs/prism-custom-theme.css">
+	<link rel="stylesheet" href="./css/canvas-slicer.min.css">
+
+	<style>
+		html, body {
+			position: relative;
+			height: 100%;
+		}
+
+		body {
+			background: #111;
+		}
+
+		body::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: -moz-linear-gradient(top, #444 0%, #111 100%);
+			background: -webkit-linear-gradient(top, #444 0%, #111 100%);
+			background: linear-gradient(to bottom, #444 0%, #111 100%);
+		}
+
+		hr {
+			border-color: #333;
+		}
+
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+
+		pre[class*="language-"] {
+			padding: 1rem;
+		}
+
+		#code pre {
+			visibility: hidden;
+		}
+
+		#code pre,
+		#code code {
+			background-color: #000;
+		}
+
+		#code pre[class*="language-"] {
+			visibility: visible;
+			margin: 0;
+			font-size: 80%;
+		}
+
+		pre[class*="language-"] {
+			font-size: 90%;
+		}
+
+		code[class*="language-"] {
+			font-size: inherit;
+		}
+
+		.new-feature {
+			color: #3c3;
+		}
+
+		.container {
+			position: relative;
+		}
+
+		.form-control,
+		.custom-select:not(:focus) {
+			background-color: #000;
+			color: #999;
+		}
+
+		.changed {
+			opacity: 0;
+			color: #fff;
+			will-change: opacity;
+			pointer-events: none;
+			-webkit-transition: opacity 1.5s ease;
+			transition: opacity 1.5s ease;
+		}
+
+		.changed.show {
+			opacity: 1;
+			-webkit-transition-duration: .4s;
+			transition-duration: .4s;
+		}
+
+		.noty_has_timeout.noty_has_progressbar .noty_progressbar {
+			background-color: #000;
+			opacity: .4;
+		}
+
+		.canvas-slicer-list,
+		.canvas-slicer[data-slicer-loading-text]::after {
+			background-color: #000;
+		}
+
+		.row--min-gap {
+			margin-right: -5px;
+			margin-left: -5px;
+		}
+
+		.row--min-gap > * {
+			padding-right: 5px;
+			padding-left: 5px;
+		}
+
+		@media (min-width: 1280px) {
+			.container--custom {
+				max-width: 1440px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div id="canvas-slicer-slider" class="container pt-4">
+		<h1 class="mb-0">
+			<span class="mr-3">
+				<span style="color: #fff">Canvas Slicer</span> Slider
+			</span>
+			<!-- BUY LINK -->
+			<a class="btn btn-primary" target="_blank" rel="noopener"
+					href="https://codecanyon.net/item/canvas-slicer-slider/22060862">
+				Buy it now!
+			</a>
+			<!-- BUY LINK -->
+		</h1>
+	</div>
+	<!-- DEMONSTRATION -->
+	<div id="demonstration" class="container container--custom">
+		<hr>
+
+		<!-- wrapper -->
+		<div id="my-slider" class="canvas-slicer" data-slicer-loading-text="Loading...">
+			<!-- list -->
+			<div class="canvas-slicer-list">
+				<img src="http://via.placeholder.com/1700x734/f89b1e/ffffff" width="1700" height="734" alt class="canvas-slicer-list__slide">
+				<img src="http://via.placeholder.com/1700x734/827ccf/ffffff" width="1700" height="734" alt class="canvas-slicer-list__slide">
+				<img src="http://via.placeholder.com/1700x734/e1791c/ffffff" width="1700" height="734" alt class="canvas-slicer-list__slide">
+				<img src="http://via.placeholder.com/1700x734/fd4dc5/ffffff" width="1700" height="734" alt class="canvas-slicer-list__slide">
+				<img src="http://via.placeholder.com/1700x734/ff4f53/ffffff" width="1700" height="734" alt class="canvas-slicer-list__slide">
+			</div>
+			<!-- controls, if you need -->
+			<div class="canvas-slicer-controls">
+				<div class="canvas-slicer-controls__arrow-prev">
+					<div class="btn btn-dark">&larr; prev</div>
+				</div>
+				<div class="canvas-slicer-controls__dots"></div>
+				<div class="canvas-slicer-controls__arrow-next">
+					<div class="btn btn-dark">next &rarr;</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="custom-setup" class="container">
+		<hr>
+		<div class="row my-3">
+			<div class="col-12 col-md-7">
+				<div class="row">
+					<div class="col-12">
+						<div class="input-group">
+							<div class="input-group-prepend">
+								<span class="input-group-text">9 Built-in presets</span>
+							</div>
+							<select class="custom-select" id="presets">
+								<option value="wind">wind</option>
+								<option value="storm">storm</option>
+								<option value="recast">recast</option>
+								<option value="slasher">slasher</option>
+								<option value="mirrors">mirrors</option>
+								<option value="ribbed">ribbed</option>
+								<option value="rubber">rubber</option>
+								<option value="translation">translation</option>
+								<option value="overlapping">overlapping</option>
+							</select>
+						</div>
+					</div>
+				</div>
+
+				<hr>
+
+				<div class="row">
+					<div class="col-auto mr-auto">
+						<div class="custom-control custom-checkbox">
+							<input type="checkbox" class="custom-control-input" id="inverse" checked>
+							<label class="custom-control-label" for="inverse">Inverse angle on "prev" slide</label>
+						</div>
+					</div>
+					<div class="col-auto mb-3">
+						<div id="changed" class="changed">Changed!</div>
+					</div>
+				</div>
+				<div class="row row--min-gap">
+					<div class="col-12 col-sm-6 col-lg-4 mb-3">
+						<div class="input-group">
+							<div class="input-group-prepend">
+								<label for="angle" class="input-group-text">angle</label>
+							</div>
+							<input type="number" class="form-control" value="60" id="angle">
+						</div>
+					</div>
+					<div class="col-12 col-sm-6 col-lg-4 mb-3">
+						<div class="input-group">
+							<div class="input-group-prepend">
+								<label for="count" class="input-group-text">count</label>
+							</div>
+							<input type="number" class="form-control" value="3" id="count">
+						</div>
+					</div>
+					<div class="col-12 col-sm-6 col-lg-4 mb-3">
+						<div class="input-group">
+							<div class="input-group-prepend">
+								<label for="desync" class="input-group-text">desync</label>
+							</div>
+							<input type="number" class="form-control" value="20" id="desync">
+						</div>
+					</div>
+					<div class="col-12 col-sm-6 mb-3">
+						<div class="input-group">
+							<div class="input-group-prepend">
+								<label for="velocity" class="input-group-text">velocity (float)</label>
+							</div>
+							<input type="number" class="form-control" value="2" id="velocity">
+						</div>
+					</div>
+					<div class="col-12 col-lg-6 mb-3">
+						<div class="input-group">
+							<div class="input-group-prepend">
+								<label for="velocity" class="input-group-text">stretching (float)</label>
+							</div>
+							<input type="number" class="form-control" value="0" id="stretching">
+						</div>
+					</div>
+					<div class="col-12 mb-3">
+						<div class="input-group">
+							<div class="input-group-prepend">
+								<span class="input-group-text">easing functions</span>
+							</div>
+							<select class="custom-select" id="easing">
+								<option value="easeInQuad">easeInQuad</option>
+								<option value="easeOutQuad">easeOutQuad</option>
+								<option value="easeInOutQuad" selected>easeInOutQuad</option>
+								<option value="easeInCubic">easeInCubic</option>
+								<option value="easeOutCubic">easeOutCubic</option>
+								<option value="easeInOutCubic">easeInOutCubic</option>
+								<option value="easeInQuart">easeInQuart</option>
+								<option value="easeOutQuart">easeOutQuart</option>
+								<option value="easeInOutQuart">easeInOutQuart</option>
+								<option value="easeInQuint">easeInQuint</option>
+								<option value="easeOutQuint">easeOutQuint</option>
+								<option value="easeInOutQuint">easeInOutQuint</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-md-5" id="code">
+				<pre><code class="lang-javascript">// initialize
+var mySlider = document.getElementById("my-slider");
+var slicer = new CanvasSlicer(mySlider, {
+    initial: 0,
+    timeout: 3000,
+    preset: "wind"
+});
+slicer.play(); // start auto playing</code></pre>
+			</div>
+		</div>
+	</div>
+	<!-- DEMONSTRATION -->
+
+	
+
+	<script src="https://cdn.rawgit.com/needim/noty/77268c46/lib/noty.min.js"></script>
+	<script src="http://demo.wezom.agency/slicer/static/prismjs/prism.js"></script>
+	<!-- INITIALIZE -->
+	<script src="./js/canvas-slicer.min.js"></script>
+	<script>
+		(function (window, CanvasSlicer) {
+			'use strict';
+			document.addEventListener('DOMContentLoaded', function () {
+				// initialize
+				// ------------------------------------------------
+				var mySlider = document.getElementById('my-slider');
+				var slicer = new CanvasSlicer(mySlider, {
+					initial: 0,
+					timeout: 3000,
+					preset: 'wind'
+				});
+				slicer.play();
+				console.log(slicer);
+
+				// demo code
+				// ---------------------------------------------
+				var _presets = document.getElementById('presets');
+				var _angle = document.getElementById('angle');
+				var _count = document.getElementById('count');
+				var _velocity = document.getElementById('velocity');
+				var _stretching = document.getElementById('stretching');
+				var _desync = document.getElementById('desync');
+				var _inverse = document.getElementById('inverse');
+				var _changed = document.getElementById('changed');
+				var _easing = document.getElementById('easing');
+				var _code = document.getElementById('code');
+
+				_angle.addEventListener('change',  function () {
+					var value = +this.value;
+					var result = slicer.changeAngle(value);
+					changed(result);
+					if (result) {
+						printCode('angle', value);
+					}
+				});
+
+				_count.addEventListener('change', function () {
+					var value = +this.value;
+					var result = slicer.changeCount(value);
+					changed(result);
+					if (result) {
+						printCode('count', value);
+					}
+				});
+
+				_velocity.addEventListener('change', function () {
+					var value = +this.value;
+					var result = slicer.changeVelocity(value);
+					changed(result);
+					if (result) {
+						printCode('velocity', value);
+					}
+				});
+
+				_stretching.addEventListener('change', function () {
+					var value = +this.value;
+					var result = slicer.changeStretching(value);
+					changed(result);
+					if (result) {
+						printCode('stretching', value);
+						if (value > 0) {
+							var changeEvent = new window.Event('change');
+							_angle.value = 0;
+							_angle.dispatchEvent(changeEvent);
+							_angle.disabled = true;
+							_angle.title = 'value for "angle" parameter must be an "0" when your "stretching" parameter is more than "0"! Disable "stretching" to be able to change the "angle"';
+							// _angle.setAttribute('disable', 'disable');
+						} else {
+							_angle.disabled = false;
+							_angle.removeAttribute('title');
+							// _angle.removeAttribute('disable', 'disable');
+						}
+					}
+				});
+
+				_easing.addEventListener('change', function () {
+					var value = this.value;
+					var result = slicer.changeEasing(value);
+					changed(result);
+					if (result) {
+						printCode('easing', value);
+					}
+				});
+
+				_desync.addEventListener('change', function () {
+					var value = +this.value;
+					var result = slicer.changeDesync(value);
+					changed(result);
+					if (result) {
+						printCode('desync', value);
+					}
+				});
+
+				_inverse.addEventListener('change', function () {
+					slicer.changeInverse(this.checked);
+					changed(true);
+					printCode('inverse', this.checked);
+				});
+
+				window.Noty.overrideDefaults({
+					type: 'alert',
+					theme: 'nest',
+					layout: 'bottomRight',
+					timeout: 5000,
+					progressBar: true,
+					closeWith: ['click']
+				});
+
+				mySlider.addEventListener('canvas-slicer:warn', function (event) {
+					var message = '<h5>Warning!</h5><p>' + event.detail.message + '</p>';
+					new window.Noty({text: message}).show();
+				});
+
+				var _timerId = null;
+				function changed (isChanged) {
+					_changed.innerText = isChanged ? 'Changed!' : 'Not changed!';
+					_changed.classList.add('show');
+					window.clearTimeout(_timerId);
+					_timerId = window.setTimeout(function () {
+						_changed.classList.remove('show');
+					}, 600);
+				}
+
+				var _codeHeader = '// initialize\n' +
+				                  'var mySlider = document.getElementById("my-slider");\n' +
+				                  'var slicer = new CanvasSlicer(mySlider, {\n' +
+				                  '    initial: 0,\n' +
+				                  '    timeout: 3000,';
+				var _codeBody = {preset: _presets.value};
+				var _codeFooter = '});\n' +
+				                  'slicer.play(); // start auto playing';
+
+				var _changeEvent = new Event('change');
+				var _printTimerId = null;
+				_presets.addEventListener('change', function () {
+					var value = this.value;
+					var preset = slicer._presets[value];
+					if (preset) {
+						_angle.value = preset.angle;
+						_count.value = preset.count;
+						_velocity.value = preset.velocity;
+						_desync.value = preset.desync;
+						_stretching.value = preset.stretching;
+						_easing.value = preset.easing;
+						_stretching.dispatchEvent(_changeEvent);
+						_angle.dispatchEvent(_changeEvent);
+						_count.dispatchEvent(_changeEvent);
+						_velocity.dispatchEvent(_changeEvent);
+						_desync.dispatchEvent(_changeEvent);
+						_easing.dispatchEvent(_changeEvent);
+					}
+					printCode('preset', value, true);
+				});
+
+				function printCode (prop, value, reset) {
+					window.clearTimeout(_printTimerId);
+					_printTimerId = window.setTimeout(function () {
+						if (reset) {
+							_codeBody = {
+								preset: _presets.value
+							};
+							if (_inverse.checked !== true) {
+								_codeBody.inverse = false;
+							}
+						}
+						_codeBody[prop] = value;
+						let props = [];
+						for (var key in _codeBody) {
+							var val = JSON.stringify(_codeBody[key]);
+							props.push('    ' + key + ': ' + val);
+						}
+						props = props.join(',\n');
+						var codeEl = _code.querySelector('code');
+						codeEl.innerHTML = [_codeHeader, props, _codeFooter].join('\n');
+						window.Prism.highlightElement(codeEl);
+					}, 50);
+				}
+			});
+		})(window, window.CanvasSlicer);
+	</script>
+	<!-- INITIALIZE -->
+</body>
+</html>

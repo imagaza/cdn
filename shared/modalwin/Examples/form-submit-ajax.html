@@ -1,0 +1,56 @@
+<html>
+	<head>
+		<title>Replete Modal - Login Form</title>
+		<link rel="stylesheet" href="css/animate.css">
+		<link rel="stylesheet" href="css/replete-modal.css">
+			
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="js/replete-modal.js"></script>
+		<style>
+			a{cursor: pointer;border: 1px solid black; padding: 7px 14px; text-align: center;}
+		</style>
+	</head>
+	<body style="margin:50 auto; width:200px;">
+		<p>This Example Only Work On Server.</p>
+		<a class="login">Login Form</a>
+		<div class="loginForm" style="display:none;">
+			<form class="login" action="test.php" method="post">
+		        <input type="email" placeholder="Your Email" class="email" name="email">
+		        <input type="password" placeholder="Enter Password" class="password" name="password">
+		        <div class="left span6">
+		        <input type="checkbox" id="remember" name="remember" checked><span>Keep me logged in</span>
+		        </div>
+		        <div class="right span6">
+		        <a href="#" class="modal-opener">Forgot password?</a>
+		    </form>
+	        </div>
+	    </div>
+		<script>
+			$('.login').on('click',function(){
+				var loginForm = $('.loginForm').html();
+				rplm({
+					title: "Login",
+					text: "Sign in below to access all the features available to you.<br><br>" + loginForm,
+					imageUrl: "img/login.png",
+					html: true,
+					animation: "swing",
+					modalNOverlay: 'transparent',
+					overlay: 'blur',
+		            confirmButtonText: 'Login',
+		            showCloseButton: true,
+		            closeButtonWithInModal: true,
+		            showLoaderOnConfirm: true,
+				}, function(){
+					// Ajax call
+					$.ajax({
+						url: "test.php",
+						data: $('.rplm-alert form.login').serialize(),
+						method: "post",
+					}).done(function() {
+						console.log('Done');
+					});
+				});
+			});
+		</script>
+	</body>
+</html>

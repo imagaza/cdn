@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<title>Replete Modal - Register Form</title>
+		<link rel="stylesheet" href="css/animate.css">
+		<link rel="stylesheet" href="css/replete-modal.css">
+			
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="js/replete-modal.js"></script>
+		<style>
+			a{cursor: pointer;border: 1px solid black; padding: 7px 14px; text-align: center;}
+		</style>
+	</head>
+	<body style="margin:50 auto; width:200px;">
+		<a class="register">Register Form</a>
+		<div class="registerForm" style="display:none;">
+	        <div class="left span6">
+	        <input type="text" placeholder="First Name" class="fname" name="fname">
+	        </div>
+	        <div class="right span6">
+	        <input type="text" placeholder="Last Name" class="lname" name="lname">
+	        </div>
+	        <input type="email" placeholder="Your Email" class="email" name="email">
+	        <input type="password" placeholder="Enter Password" class="password" name="password">
+	    </div>
+		<script>
+			$('.register').on('click',function(){
+				var registerForm = $('.registerForm').html();
+				rplm({
+					title: "Register",
+					text: "Sign up for free.<br><br>" + registerForm,
+					imageUrl: "img/register.png",
+					html: true,
+					animation: "jello",
+					overlay: 'blur',
+					allowOutsideClick: true,
+		            confirmButtonText: 'Register'
+				});
+			});
+		</script>
+	</body>
+</html>

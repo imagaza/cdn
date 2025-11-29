@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<title>Replete Modal - Feedback Form</title>
+		<link rel="stylesheet" href="css/animate.css">
+		<link rel="stylesheet" href="css/replete-modal.css">
+			
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="js/replete-modal.js"></script>
+		<style>
+			a{cursor: pointer;border: 1px solid black; padding: 7px 14px; text-align: center;}
+		</style>
+	</head>
+	<body style="margin:50 auto; width:200px;">
+		<a class="feedback">Feedback Form</a>
+		<div class="feedbackForm" style="display:none;">
+	        <input type="text" placeholder="Full Name" class="name" name="name">
+	        <input type="email" placeholder="Your Email" class="email" name="email">
+	        <select name="department" id="department">
+	            <option value="department">SelectDepartment</option>
+	            <option value="hr">HR</option>
+	            <option value="manager">Manager</option>
+	            <option value="technical">Technical</option>
+	            <option value="marketing">Marketing</option>
+	            <option value="hardware">Hardware</option>
+	        </select>
+	        <textarea name="message" id="message" placeholder="Comment/Message"></textarea>
+	    </div>
+		<script>
+			$('.feedback').on('click',function(){
+				var feedbackForm = $('.feedbackForm').html();
+				rplm({
+					title: "FeedBack",
+					text: "We appreciate your FeedBack. "+feedbackForm,
+					html: true,
+					showCancelButton: false,
+					closeOnConfirm: false,
+					animation: "tada",
+					modalNOverlay: 'white',
+					overlay: 'black',
+		            confirmButtonText: 'Submit FeedBack',
+		            allowOutsideClick: true,
+				});
+			});
+		</script>
+	</body>
+</html>

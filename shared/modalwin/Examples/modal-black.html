@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<title>Replete Modal - Black Modal</title>
+		<link rel="stylesheet" href="css/animate.css">
+		<link rel="stylesheet" href="css/replete-modal.css">
+			
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="js/replete-modal.js"></script>
+		<style>
+			a{cursor: pointer;border: 1px solid black; padding: 7px 14px; text-align: center;}
+		</style>
+	</head>
+	<body style="margin:50 auto; width:200px;">
+		<a class="blackCandie">Black Modal</a>
+		<script>
+			$('.blackCandie').on('click',function(){
+				rplm({
+					title: "Black Modal",
+					text: "Cotton candy icing sweet roll lollipop dessert fruitcake muffin. Tart lemon drops dragée dessert. Oat cake chocolate bar gummies lollipop pastry sweet roll croissant candy gummi bears.",
+					html: true,
+					animation: "swing",
+					modalNOverlay: 'black',
+					showCloseButton: true,
+					closeButtonWithInModal: true,
+					confirmButtonText: 'Done',
+				});
+			});
+		</script>
+	</body>
+</html>

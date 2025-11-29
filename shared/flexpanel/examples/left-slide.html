@@ -1,0 +1,70 @@
+﻿<!doctype html>
+<html lang="en">
+<!--<![endif]-->
+<head>
+<title>FlexPanel: Slide from left</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, maximum-scale=1 user-scalable=no" />
+
+<link rel="stylesheet" href="../css/flexpanel.min.css" type="text/css" media="screen" />
+<!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+<body>
+<div id="container">
+  <section id="wrapper">
+    <div class="inner">
+      
+	  <header class="main">
+        <div class="inner-wrap">
+         header
+        </div>
+      </header>
+   
+      
+	  
+		  <!--- CONTENT  -->
+	 <div class="content-wrap">
+        <div class="inner-wrap">
+         content
+        </div>
+      </div>
+	   <!--- CONTENT  -->
+     
+    </div>
+  </section>
+  
+  <!--- SIDE PANEL -->
+  <nav class="flexpanel">
+    <div class="viewport-wrap">
+      <div class="flex-btn"></div>
+      <div class="viewport">
+	  sadlaskdj aslkd sajlkdj lsakjd salkdj 
+   
+      </div>
+    </div>
+  </nav>
+    <!--- SIDE PANEL -->
+</div>
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> 
+<script type="text/javascript" src="../js/libs/hammer.min.js"></script> 
+<script type="text/javascript" src="../js/libs/jquery.hammer.js"></script> 
+<script type="text/javascript" src="../js/jquery.flexpanel.js"></script> 
+<script type="text/javascript"> 
+	$('.flexpanel').flexpanel({
+		animation: 'slide',
+		direction: 'left'		
+	});
+</script>
+</body>
+</html>

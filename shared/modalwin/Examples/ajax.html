@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<title>Replete Modal - Ajax Call</title>
+		<link rel="stylesheet" href="css/animate.css">
+		<link rel="stylesheet" href="css/replete-modal.css">
+			
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="js/replete-modal.js"></script>
+		<style>
+			a{cursor: pointer;border: 1px solid black; padding: 7px 14px; text-align: center;}
+		</style>
+	</head>
+	<body style="margin:50 auto; width:200px;">
+		<a class="ajax">Ajax Call</a>
+		<script>
+			$('.ajax').on('click',function(){
+				rplm({
+					title: "Ajax request example",
+					text: "Submit to run ajax request",
+					type: "info",
+					showCancelButton: true,
+					closeOnConfirm: false,
+					showLoaderOnConfirm: true,
+				},
+				function(){
+					setTimeout(function(){
+		                rplm({
+		                    title:"",
+		                    text:"Ajax request finished!",
+		                    type: "success",
+		                    confirmButtonText: 'Done',
+		                    closeOnConfirm: false,
+		                    });
+					}, 2000);
+				});
+			});
+		</script>
+	</body>
+</html>

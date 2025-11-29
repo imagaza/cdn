@@ -1,0 +1,58 @@
+
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	border-radius: $radius;
+}
+
+@mixin transition($type, $speed, $length, $delay: false){	
+   @if not $delay {
+     -webkit-transition: $type $speed $length;
+     -moz-transition: $type $speed $length;
+     -ms-transition: $type $speed $length;
+     transition: $type $speed $length;
+  } @else {
+    -webkit-transition: $type $speed $length $delay;
+    -moz-transition: $type $speed $length $delay;
+    -ms-transition: $type $speed $length $delay;
+    transition: $type $speed $length $delay;
+  }
+}
+
+@mixin transform($value){	
+	-webkit-transform: #{$value};
+	-moz-transform: #{$value};
+	-ms-transform: #{$value};
+	transform: #{$value};
+}
+
+@mixin clear() { 
+    &:before, &:after {
+        content: "\0020";
+        display: block;
+        height: 0;
+        overflow: hidden;
+    }
+    &:after {
+        clear: both;
+    }
+}
+@mixin hide{
+    overflow:hidden;
+    text-indent:-9999px;
+    display:block;
+}
+@mixin reset{
+	margin:0;
+	padding:0;
+	background: none;
+}
+@mixin box-sizing{
+-webkit-box-sizing: border-box; /* webkit */
+   -khtml-box-sizing: border-box; /* konqueror */
+     -moz-box-sizing: border-box; /* firefox */
+      -ms-box-sizing: border-box; /* ie */
+          box-sizing: border-box; /* css3 */
+}
+

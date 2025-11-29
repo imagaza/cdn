@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Jquery Kod Günlüğüm Türkçe Tarih</title>
+<link rel="stylesheet" href="css/jquery-ui.css">
+<link rel="stylesheet" href="css/jquery-ui-timepicker-addon.min.css">
+<script src="js/jquery-1.12.4.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/jquery-ui-timepicker-addon.min.js"></script>
+<script src="js/jquery-ui-timepicker-tr.js"></script>
+<script>
+ $( function() {
+ 
+ $( "#tarih" ).datetimepicker({
+    dateFormat: "dd-mm-yy",
+    altFieldTimeOnly: false,
+    altFormat: "yy-mm-dd",
+    altTimeFormat: "HH:mm",
+    altField:"#tarih-db",
+    monthNames: [ "Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık" ],
+    dayNamesMin: [ "Pa", "Pt", "Sl", "Ça", "Pe", "Cu", "Ct" ],
+    firstDay:1
+});
+ 
+ } );
+ 
+</script>
+</head>
+<body>
+<input id="tarih" type="text">
+ <input type="text" id="tarih-db"><!-- bu değeri type="hidden" yaparak post işleminizde kullanabilrsiniz. Kullanıcının göreceği kısmı değiştirmek için  dateFormat: "dd-mm-yy" formatında değişiklikler yapabilirsiniz.-->
+</body>
+ 
+</html>

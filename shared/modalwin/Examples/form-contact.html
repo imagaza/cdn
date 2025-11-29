@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<title>Replete Modal - Contact Form</title>
+		<link rel="stylesheet" href="css/animate.css">
+		<link rel="stylesheet" href="css/replete-modal.css">
+			
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="js/replete-modal.js"></script>
+		<style>
+			a{cursor: pointer;border: 1px solid black; padding: 7px 14px; text-align: center;}
+		</style>
+	</head>
+	<body style="margin:50 auto; width:200px;">
+		 <a class="contact">Contact Form</a>
+		<div class="contactForm" style="display:none;">
+	        <input type="text" placeholder="Your Name" class="name" name="name">
+	        <input type="email" placeholder="Your Email" class="email" name="email">
+	        <input type="text" placeholder="Your Phone" class="phone" name="phone">
+	        <input type="text" placeholder="Your Message" class="message" name="message">
+	    </div>
+		<script>
+			$('.contact').on('click',function(){
+				var conForm = $('.contactForm').html();
+				rplm({
+					title: "Get In Touch!!",
+					text: "Get in touch with us and we'll be with you as soon as possible!<br><br>" + conForm,
+					imageUrl: "img/mail.png",
+					html: true,
+					animation: "rotateIn",
+					modalNOverlay: 'white',
+					overlay: 'blur',
+		            confirmButtonText: 'Submit',
+		            showCloseButton: true,
+		            closeButtonWithInModal: true,
+				});
+			});
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<title>Replete Modal - Close On Timer</title>
+		<link rel="stylesheet" href="css/animate.css">
+		<link rel="stylesheet" href="css/replete-modal.css">
+			
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="js/replete-modal.js"></script>
+		<style>
+			a{cursor: pointer;border: 1px solid black; padding: 7px 14px; text-align: center;}
+		</style>
+	</head>
+	<body style="margin:50 auto; width:200px;">
+		<a class="timer">Close On Timer</a>
+		<script>
+			$('.timer').on('click',function(){
+				rplm({
+					title: "Close on timer set!",
+					text: "I will close in 2 seconds.",
+					timer: 2000,
+					animation: 'swing',
+					modalNOverlay: 'black',
+					svgIcon: 'heart',
+					confirmButtonText: 'Done',
+					allowOutsideClick: true,
+				});
+			});
+		</script>
+	</body>
+</html>

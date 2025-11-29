@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<title>Replete Modal - Block Modal Using Cookie</title>
+		<link rel="stylesheet" href="css/animate.css">
+		<link rel="stylesheet" href="css/replete-modal.css">
+			
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="js/replete-modal.js"></script>
+		<style>
+			a{cursor: pointer;border: 1px solid black; padding: 7px 14px; text-align: center;}
+		</style>
+	</head>
+	<body style="margin:50 auto; width:200px;">
+		<p>If you block pop up by clicking </p>
+		<script>
+			$(window).load( function(){
+				rplm({
+					title: "One time Modal",
+					text: 'Sweet roll jelly toffee dessert toffee lollipop. Apple pie danish gummies jujubes jelly beans sweet caramels soufflé dragée. Marzipan danish gummies oat cake cupcake. Marzipan danish toffee croissant cotton candy. ',
+					showConfirmButton: true,
+					animation: 'bounce',
+					allowOutsideClick: true,
+					overlay: "white",
+					preventDialog: true, 			// To set dialog Block text
+        			cookieName:'blockPopUP', 		// Cookie Name
+					preventText: "Block Dialog",	// Block Link Text
+					preventDays: 10000000, 			// Number of days for cookie
+				});
+			});
+		</script>
+	</body>
+</html>

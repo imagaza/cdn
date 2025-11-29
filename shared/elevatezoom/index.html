@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  	<head>
+	    <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+	    <title>Lightweight eCommerce product jQuery plugin | Ubislider</title>
+
+        <!-- Vendor styles for this template -->
+    
+	    
+	    <link href="css/ubislider.min.css" rel="stylesheet" type="text/css">
+
+	   
+
+
+	
+	</head>
+
+	<body>
+
+<div class="ubislider-image-container" data-ubislider="#urun_detay_resim" id="detay_resim"></div>
+		                <div id="urun_detay_resim" class="ubislider">
+		                    <a class="arrow prev"></a>
+		                    <a class="arrow next"></a>
+		                    <ul id="gal1" class="ubislider-inner">
+		                    	<li> 
+		                    		<a> 
+		                    			<img class="product-v-img" src="img/sample5.jpg"> 
+		                    		</a> 
+		                    	</li>
+		                    	<li> 
+		                    		<a> 
+		                    			<img class="product-v-img" src="img/sample4.jpg"> 
+		                    		</a> 
+		                    	</li>
+		                    	<li> 
+		                    		<a> 
+		                    			<img class="product-v-img" src="img/sample3.jpg"> 
+		                    		</a> 
+		                    	</li>
+		                    	<li> 
+		                    		<a> 
+		                    			<img class="product-v-img" src="img/sample1.jpg"> 
+		                    		</a> 
+		                    	</li>
+		                    	<li> 
+		                    		<a> 
+		                    			<img class="product-v-img" src="img/sample2.jpg"> 
+		                    		</a> 
+		                    	</li>
+		                    	<li> 
+		                    		<a> 
+		                    			<img class="product-v-img" src="img/sample3.jpg"> 
+		                    		</a> 
+		                    	</li>
+		                    </ul>
+		                </div>
+		
+		
+	
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script type="text/javascript" src="js/elevatezoom.js"></script>
+        <script src="js/ubislider.min.js"></script>
+        <script src="js/scripts.js"></script>
+		
+        <script type="text/javascript">
+			
+		    $('#urun_detay_resim').ubislider({
+		        arrowsToggle: true,
+		        type: 'ecommerce',
+		        hideArrows: true,
+		        autoSlideOnLastClick: true,
+		        modalOnClick: true,
+		        onTopImageChange: function(){
+		        	$('#detay_resim img').elevateZoom({
+            zoomWindowWidth:400,
+			easing : true,
+			tint:true, 
+			tintColour:'#fff', 
+			tintOpacity:0.5,
+			zoomWindowFadeIn: 500,
+			zoomWindowFadeOut: 500,
+			zoomWindowPosition: 2,
+			 zoomWindowOffetx: 60,
+			 zoomWindowOffety: 30,
+			lensFadeIn: 500,
+			lensFadeOut: 500,
+            zoomWindowHeight:400
+		});
+				
+		        }
+		    }); 
+		   
+        </script>
+	</body>
+</html>

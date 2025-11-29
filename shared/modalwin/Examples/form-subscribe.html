@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<title>Replete Modal - Subscribe Form</title>
+		<link rel="stylesheet" href="css/animate.css">
+		<link rel="stylesheet" href="css/replete-modal.css">
+			
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="js/replete-modal.js"></script>
+		<style>
+			a{cursor: pointer;border: 1px solid black; padding: 7px 14px; text-align: center;}
+		</style>
+	</head>
+	<body style="margin:50 auto; width:200px;">
+		<a class="subscribe">Subscribe Form</a>
+		<script>
+			$('.subscribe').on('click',function(){
+				rplm({
+					title: "Get daily updates for free!",
+					text: "Signup to our awesome newsletter and receive fresh daily news",
+					type: "input",
+					inputPlaceholder: "Subscribe with email",
+					imageUrl: "img/letter.png",
+					animation: 'jello',
+					modalNOverlay: 'black',
+					overlay: 'blur',
+					allowOutsideClick: true ,
+		            confirmButtonText: 'Sign Me Up',
+				});
+			});
+		</script>
+	</body>
+</html>

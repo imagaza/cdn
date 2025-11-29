@@ -1,0 +1,44 @@
+<html>
+	<head>
+		<title>Replete Modal - Comment Form</title>
+		<link rel="stylesheet" href="css/animate.css">
+		<link rel="stylesheet" href="css/replete-modal.css">
+			
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="js/replete-modal.js"></script>
+		<style>
+			a{cursor: pointer;border: 1px solid black; padding: 7px 14px; text-align: center;}
+		</style>
+	</head>
+	<body style="margin:50 auto; width:200px;">
+		<a class="comment">Comment Form</a>
+		<div class="commentForm" style="display:none;">
+	        <div class="left span6">
+	        <input type="text" placeholder="First Name" class="fname" name="fname">
+	        </div>
+	        <div class="right span6">
+	        <input type="text" placeholder="Last Name" class="lname" name="lname">
+	        </div>
+	        <input type="email" placeholder="Your Email" class="email" name="email">
+	        <textarea name="Message" id="Message" placeholder="Comment"></textarea>
+	    </div>
+		<script>
+			$('.comment').on('click',function(){
+				var commentForm = $('.commentForm').html();
+				rplm({
+					title: "Your Comments",
+					text: commentForm,
+					imageUrl: "img/comment.png",
+					html: true,
+					animation: "rotateIn",
+					modalNOverlay: 'white',
+					overlay: 'black',
+		            confirmButtonText: 'Post Comment',
+		            allowOutsideClick: true,
+		            showCancelButton: true,
+		            cancelButtonText: "No"
+				});
+			});
+		</script>
+	</body>
+</html>

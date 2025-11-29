@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<title>Replete Modal - Blur Overlay</title>
+		<link rel="stylesheet" href="css/animate.css">
+		<link rel="stylesheet" href="css/replete-modal.css">
+			
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="js/replete-modal.js"></script>
+		<style>
+			a{cursor: pointer;border: 1px solid black; padding: 7px 14px; text-align: center;}
+		</style>
+	</head>
+	<body style="margin:50 auto; width:200px;">
+		<a class="customoverlay">Custom Color Overlay</a>
+		<script>
+			$('.customoverlay').on('click',function(){
+				rplm({
+					title: "Custom Color Overlay",
+					text: "Gingerbread chocolate muffin chocolate cake sweet roll topping. Dragée biscuit chocolate sugar plum cake candy canes dessert macaroon biscuit. Macaroon oat cake powder.",
+					html: true,
+					overlay: 'custom',
+					customOverlayColor:'#46B9B1',
+					showCloseButton: true,
+					closeButtonWithInModal: true,
+					confirmButtonText: 'Done',
+		            showLoaderOnConfirm: true,
+		            allowOutsideClick: true,
+				});
+			});
+		</script>
+	</body>
+</html>

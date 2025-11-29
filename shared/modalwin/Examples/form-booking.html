@@ -1,0 +1,54 @@
+<html>
+	<head>
+		<title>Replete Modal - Booking Form</title>
+		<link rel="stylesheet" href="css/animate.css">
+		<link rel="stylesheet" href="css/replete-modal.css">
+			
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="js/replete-modal.js"></script>
+		<style>
+			a{cursor: pointer;border: 1px solid black; padding: 7px 14px; text-align: center;}
+		</style>
+	</head>
+	<body style="margin:50 auto; width:200px;">
+		<a class="booking">Booking Form</a>
+		<div class="bookingForm" style="display:none;">
+	        <input type="text" placeholder="Full Name" class="name" name="name">
+	        <div class="left span6">
+	        <input type="email" placeholder="Your Email" class="email" name="email">
+	        </div>
+	        <div class="right span6">
+	        <input type="text" placeholder="Phone Number" class="phone" name="phone">
+	        </div>
+	        <div class="left span6">
+	        <input type="text" placeholder="No Of Adults" class="guests" name="guests">
+	        </div>
+	        <div class="right span6">
+	        <input type="text" placeholder="No Of Children" class="children" name="children">
+	        </div>
+	        <div class="left span6">
+	        <input type="text" name="checkIn" id="checkIn" placeholder="mm/dd/yyyy" />
+	        </div>
+	        <div class="right span6">
+	        <input type="text" placeholder="mm/dd/yyyy" class="checkOut" name="checkOut">
+	        </div>
+	        <textarea name="message" id="message" placeholder="Comment/Message"></textarea>
+	    </div>
+		<script>
+			$('.booking').on('click',function(){
+				var bookingForm = $('.bookingForm').html();
+				rplm({
+					title: "Book Your Holiday",
+					text: bookingForm,
+					html: true,
+					showCancelButton: false,
+					closeOnConfirm: true,
+					animation: "tada",
+					overlay: 'black',
+		            confirmButtonText: 'Book Now',
+		            allowOutsideClick: true,
+				});
+			});
+		</script>
+	</body>
+</html>

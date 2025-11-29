@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<title>Replete Modal - Svg Icon</title>
+		<link rel="stylesheet" href="css/animate.css">
+		<link rel="stylesheet" href="css/replete-modal.css">
+			
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="js/replete-modal.js"></script>
+		<style>
+			a{cursor: pointer;border: 1px solid black; padding: 7px 14px; text-align: center;}
+		</style>
+	</head>
+	<body style="margin:50 auto; width:200px;">
+		<a class="svg" data-icon="message">Message SVG Icon</a>
+		<script>
+			$('.svg').on('click',function(){
+		        var svgIconVar = $(this).data('icon');
+				rplm({
+					title: svgIconVar+" SVG Icon",
+					text: "This is SVG Icon Demo",
+					svgIcon: svgIconVar,
+					confirmButtonText: 'Done',
+					allowOutsideClick: true,
+				});
+			});
+		</script>
+	</body>
+</html>

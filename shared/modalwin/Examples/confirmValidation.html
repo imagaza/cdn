@@ -1,0 +1,44 @@
+<html>
+	<head>
+		<title>Replete Modal - Confirm Validation</title>
+		<link rel="stylesheet" href="css/animate.css">
+		<link rel="stylesheet" href="css/replete-modal.css">
+			
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="js/replete-modal.js"></script>
+		<style>
+			a{cursor: pointer;border: 1px solid black; padding: 7px 14px; text-align: center;}
+		</style>
+	</head>
+	<body style="margin:50 auto; width:200px;">
+		<a class="confirmValidation">Confirm Validation </a>
+		<script>
+			$('.confirmValidation').on('click',function(){
+				rplm({
+					title: "An input!",
+					text: "Write something interesting:",
+					type: "input",
+					showCancelButton: true,
+					closeOnConfirm: false,
+					animation: "slide-from-top",
+					inputPlaceholder: "Write something"
+				},
+				function(inputValue){
+					if (inputValue === false)
+						return false;
+					if (inputValue === "") {
+						rplm.showInputError("You need to write something!");
+						return false;
+					}
+					rplm({
+		                title: "Nice!",
+		                text: "You wrote: " + inputValue,
+		                type: "success",
+		                confirmButtonText: 'Done',
+		                closeOnConfirm: false,
+		                });
+				});
+			});
+		</script>
+	</body>
+</html>
